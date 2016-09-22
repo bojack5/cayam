@@ -1,0 +1,31 @@
+{% extends 'anteproyecto/base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+{{ titulo }}
+{% endblock %}
+
+
+    {% block subtitle1 %} {{ subtitulo }} {% endblock %}
+    {% block texto %}
+        {% if form %}
+            <form method="post" action="/anteproyecto/">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" name="ante" value="{{ submit }}">
+            </form>
+
+        {% endif %}
+              
+        
+        {% if form2 %}
+        <form method="post" action="/anteproyecto/">
+            {% csrf_token %}
+            {{ form2.as_p }}
+            <input type="submit" name="ante" value="{{ submit2 }}">
+        </form>
+
+        
+        {% endif %}
+            
+    {% endblock %}

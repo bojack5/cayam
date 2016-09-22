@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+	<head>
+		<title>{% block title %} {% endblock %}</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href='http://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="{% static 'sistema/css/bootstrap.min.css' %}"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'sistema/css/custom.css' %}"/>		
+	</head>
+
+	<body>
+		
+		<!--  Navigation Bar -->
+		
+		<nav class="navbar navbar-default navbar-fixed-top noBorder" role="navigation">
+			<div class="container">
+				
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand brandStyle" href="#"><img src="{% static 'sistema/images/logo.jpg' %}" height="60" width="80"></a>
+				</div>
+				
+				<div class="collapse navbar-collapse noPadding"	id="myNavbar">
+					<div class="navbar-right menustyle">
+						<ul class="nav navbar-nav">
+							<li><a href="#"><p>Principal</p></a></li>
+							<li><a href="#"><p></p></a></li>
+							<li><a href="#"><p>contact us</p></a></li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</nav>
+
+		<!-- Main Page -->
+		
+		<div class="container-fluid noPadding">
+			
+			{% block header %}{% endblock %}
+
+			
+			<div class="container text-center">
+				
+				<h1>{% block subtitle1 %} {% endblock %}</h1>
+
+				<p class="textStyle">
+					{% block texto %} {% endblock %}
+				</p>
+				
+				<h1>{% block subtitleImages %} {% endblock %}</h1>
+
+			</div>
+			
+			<div class="container textstyle">
+				<div class="row text-center latestProjects">
+					
+					<div class="col-md-4 col-sm-6">
+						<a href="http://dribbble.com/shots/1210363-Weather-App-Washing-Machine-iOS7" >
+							<img class="imgsize" src="{% static 'sistema/images/1.png' %}" alt="weather app">
+						</a>
+						<p>Anteproyecto <a href="/anteproyecto/">learn more →</a></p>
+					</div>
+					
+					<div class="col-md-4 col-sm-6">
+						<a href="http://dribbble.com/shots/202313-British-Tea-Cup" >
+							<img class="imgsize" src="{% static 'sistema/images/2.png' %}" alt="british tea cup">
+						</a>
+						<p>Desarrollo de Proyecto <a href="http://dribbble.com/shots/202313-British-Tea-Cup">learn more →</a></p>
+					</div>
+					
+
+					<div class="col-md-4 col-sm-12">
+						<a href="http://dribbble.com/shots/606745-In-app-Visual-Data" >
+							<img class="imgsize" src="{% static 'sistema/images/3.png' %}" alt="app visualization data">
+						</a>
+						<p>Impresion <a href="http://dribbble.com/shots/606745-In-app-Visual-Data">learn more →</a></p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Footer -->
+			
+			<div class="container footer">
+				<div class="col-xs-12 col-md-8 noPadding">
+					<p id="footerLogoText">Cayam Proyectos © 2016</p>
+				</div>
+				<div class="col-xs-12 col-md-4 noPadding">
+					<div class="socialButtons responsiveAlign">
+						<a href="#" class="noPadding">
+							<img src="{% static 'sistema/images/twitter.svg' %}" alt="image1">
+						</a>
+						<a href="#" class="noPadding">
+							<img src="{% static 'sistema/images/facebook.svg' %}" alt="image1">
+						</a>
+						<a href="#" class="noPadding">
+							<img src="{% static 'sistema/images/behance.svg' %}" alt="image1">
+						</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script> 
+		<script src="{% static 'sistema/js/bootstrap.min.js' %}"></script>
+		<script src="{% static 'sistema/js/myscript.js' %}"></script>
+	</body>
+</html>
